@@ -1,0 +1,12 @@
+.starRating {
+  display: flex;
+  column-gap: 6px;
+  margin-bottom: 39px;
+}
+.input {
+  display: none;
+}
+.star {
+  cursor: pointer;
+  transition: color 200ms;
+}

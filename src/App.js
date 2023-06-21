@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { createContext, useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+
+import { Home } from './pages/Home/Home';
+import { NotFound } from './pages/NotFound/NotFound';
+import { Cart } from './pages/Cart/Cart';
+import { ProductCatalog } from './pages/ProductCatalog/ProductCatalog';
+import { AnimatePresence, motion } from 'framer-motion';
+
+import styles from './styles.module.css';
+
+export const SearchContext = createContext();
 
 function App() {
+  const location = useLocation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.wrapper}>
+      <AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/Cart" element={<Cart />} />
+          <Route path="/ProductCatalog/Cart" element={<Cart />} />
+          <Route path="/ProductCatalog" element={<ProductCatalog />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }

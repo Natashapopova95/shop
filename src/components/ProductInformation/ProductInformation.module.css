@@ -1,0 +1,268 @@
+#productInformation {
+  margin-bottom: 240px;
+}
+.experiences {
+  margin-bottom: 270px;
+}
+.wrapper {
+  display: flex;
+  column-gap: 140px;
+}
+.images {
+  position: relative;
+  z-index: 4;
+}
+.images img {
+  position: relative;
+  z-index: 3;
+  border-radius: 20px;
+}
+.images::before {
+  content: '';
+  position: absolute;
+  max-width: 495px;
+  width: 100%;
+  height: 422px;
+  left: -65px;
+  top: -60px;
+  background: #f7f7f7;
+  border-radius: 20px;
+}
+.images::after {
+  content: '';
+  position: absolute;
+  max-width: 495px;
+  width: 100%;
+  height: 300px;
+  left: 149px;
+  top: 60px;
+  background: #f7f7f7;
+  border-radius: 20px;
+}
+.info {
+  max-width: 556px;
+}
+.subtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.175em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #e58411;
+}
+.title {
+  font-family: 'Lato', sans-serif;
+  font-size: 42px;
+  line-height: 49px;
+  text-transform: capitalize;
+  color: #1e1e1e;
+  margin-bottom: 20px;
+  max-width: 413px;
+}
+.text {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 185%;
+  color: #1e1e1e;
+  opacity: 0.8;
+  margin-bottom: 24px;
+}
+.inner {
+  display: flex;
+  margin-left: 90px;
+}
+.materialsInfo {
+  margin-left: 80px;
+}
+.MaterialsImages {
+  display: flex;
+  column-gap: 30px;
+}
+
+.img {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+}
+.img img {
+  margin-bottom: 47px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 4;
+  max-width: 223px;
+  width: 100%;
+}
+
+.img::before {
+  content: '';
+  position: absolute;
+  width: 187px;
+  height: 228px;
+  left: 17px;
+  top: 21px;
+  background: #707a7f;
+  opacity: 0.9;
+  filter: blur(25px);
+  border-radius: 49px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  border-radius: 20px 0;
+}
+.img::after {
+  content: '';
+  position: absolute;
+  width: 198px;
+  height: 202px;
+  left: 14px;
+  top: 401px;
+  background-color: #707a7f;
+  opacity: 0.9;
+  filter: blur(25px);
+  border-radius: 49px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.imgMax {
+  position: relative;
+  z-index: 4;
+}
+.imgMax img {
+  margin-top: 130px;
+  position: relative;
+  z-index: 4;
+  border-radius: 20px;
+  max-width: 445px;
+  width: 100%;
+}
+
+.imgMax::before {
+  content: '';
+  position: absolute;
+  width: 266px;
+  height: 245px;
+  left: 179px;
+  top: 86px;
+  background: #f7f7f7;
+  border-radius: 20px 0;
+}
+.imgMax::after {
+  content: '';
+  position: absolute;
+  width: 432px;
+  height: 201px;
+  left: 10px;
+  top: 393px;
+  background-color: #9b784f;
+  opacity: 0.9;
+  filter: blur(25px);
+  border-radius: 49px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+@media (max-width: 1200px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 20px;
+  }
+  .wrapper {
+    flex-direction: column;
+    margin: 0 20px;
+  }
+  .images::before {
+    display: none;
+  }
+  .images img {
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 20px;
+  }
+  .images::after {
+    content: '';
+    position: absolute;
+    width: 82%;
+    height: 82%;
+    left: 41px;
+    background-color: #9b8e7f;
+    opacity: 0.9;
+    filter: blur(25px);
+    border-radius: 49px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+  .experiences {
+    margin-bottom: 179px;
+  }
+  .MaterialsImages {
+    margin-top: 150px;
+  }
+  .imgMax::before {
+    display: none;
+  }
+  .materialsInfo {
+    margin-right: 124px;
+  }
+  .imgMax::before {
+    display: none;
+  }
+  .imgMax::after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 30%;
+    left: 10px;
+    top: 393px;
+    background-color: #9b784f;
+    opacity: 0.9;
+    filter: blur(25px);
+    border-radius: 49px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+}
+@media (max-width: 850px) {
+  .materialsInfo {
+    margin: 0 220px 0 0;
+  }
+  .MaterialsImages {
+    margin-top: 150px;
+    margin-right: 37px;
+  }
+}
+
+@media (max-width: 700px) {
+  .imgMax::after {
+    content: '';
+    position: absolute;
+    top: 317px;
+    width: 90%;
+    height: 25%;
+  }
+  .img::before {
+    display: none;
+  }
+  .img::after {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  .imgMax::after {
+    display: none;
+  }
+
+  .img::after {
+    display: none;
+  }
+  .img__::before {
+    display: none;
+  }
+
+  .materialsInfo {
+    margin: 0;
+  }
+  .imgMax img {
+    margin-top: 40px;
+  }
+  #productInformation {
+    margin-bottom: 30px;
+  }
+}

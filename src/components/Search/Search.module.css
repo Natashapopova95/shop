@@ -1,0 +1,71 @@
+.input {
+  background: rgba(255, 255, 255, 0.15);
+  border: 0.861538px solid rgba(201, 199, 199, 0.6);
+  color: #fff;
+  opacity: 0.8;
+  border-radius: 42px;
+  max-width: 378px;
+  width: 100%;
+  padding: 16px 0 16px 50px;
+  transition: all 0.3s;
+  font-size: 17px;
+}
+.input::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+.input:focus {
+  border: 1px solid rgba(255, 254, 254, 0.872);
+}
+.root {
+  position: relative;
+  left: -28%;
+  max-width: 378px;
+  width: 100%;
+}
+.search {
+  position: absolute;
+  left: 18px;
+  top: 16px;
+}
+.search img {
+  width: 21px;
+  height: 21px;
+  color: #fff;
+  opacity: 0.3;
+}
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #fff;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.close:hover {
+  opacity: 0.8;
+}
+@media (max-width: 1150px) {
+  .root {
+    left: 9px;
+  }
+}
+@media (max-width: 600px) {
+  .input {
+    max-width: 300px;
+    padding: 10px 0 10px 50px;
+  }
+  .search {
+    top: 11px;
+  }
+  .close {
+    right: 89px;
+    top: 7px;
+  }
+}
+@media (max-width: 500px) {
+  .close {
+    right: 46px;
+  }
+}

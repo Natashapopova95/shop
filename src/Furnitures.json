@@ -1,0 +1,262 @@
+[
+  {
+    "id": 0,
+    "imageUrl": "https://hoff.ru/upload/hoff_resize/hoff-images/100/346/9/f2f481c5abd56086521f28076ba5e775.jpg/666x444_85.webp",
+    "title": "Sakarias Armchair",
+    "price": 392,
+    "category": 1,
+    "numder": 1
+  },
+  {
+    "id": 2,
+    "imageUrl": "https://hoff.ru/upload/hoff_resize/hoff-images/161/593/7/fd7b93f60d5c4899282886bba7d74979.jpg/666x444_85.webp",
+    "title": "Anjay Chair",
+    "price": 519,
+    "category": 1,
+    "numder": 1
+  },
+  {
+    "id": 3,
+    "imageUrl": "https://hoff.ru/upload/iblock/de2/de23766e6bea48c58e128649ef351282.jpg",
+    "title": "Nyantuy Chair",
+    "price": 921,
+    "category": 1,
+    "numder": 1
+  },
+  {
+    "id": 1,
+    "imageUrl": "https://hoff.ru/upload/iblock/f7a/f7a9575edf89ebae87afaea6766ef3ae.jpg",
+    "title": "Baltsar Chair",
+    "price": 299,
+    "category": 1,
+    "numder": 1
+  },
+  {
+    "id": 4,
+    "imageUrl": "https://hoff.ru/upload/iblock/d91/d913fef73985b982e4e17fe902cbeaaa.jpg",
+    "title": "Nyantuy Beds",
+    "price": 415,
+    "category": 2,
+    "numder": 1
+  },
+  {
+    "id": 5,
+    "imageUrl": "https://hoff.ru/upload/iblock/4c2/4c2b66e1493a33d279628e9fd1c1eed3.jpg",
+    "title": " Baltsar Beds",
+    "types": [0],
+    "sizes": [30, 40],
+    "price": 580,
+    "category": 2,
+    "numder": 1
+  },
+  {
+    "id": 6,
+    "imageUrl": "https://hoff.ru/upload/iblock/e4e/e4ed50cb2cf45fe39983e4821ff16a7b.jpg",
+    "title": "Sakarias Beds",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 675,
+    "category": 2,
+    "numder": 1
+  },
+  {
+    "id": 7,
+    "imageUrl": "https://hoff.ru/upload/iblock/636/63650d973e6cbe97a6ad4430c803b0ec.jpg",
+    "title": "Anjay Beds",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 450,
+    "category": 2,
+    "numder": 1
+  },
+  {
+    "id": 8,
+    "imageUrl": "https://hoff.ru/upload/iblock/058/058f092cbe0c6e899a28d3d776109f2a.jpg",
+    "title": "Anjay sofa",
+    "price": 789,
+    "category": 3,
+    "numder": 1
+  },
+  {
+    "id": 9,
+    "imageUrl": "https://hoff.ru/upload/iblock/07b/07b7bcd50cbca564514611fc09b87062.jpg",
+    "title": "Sakarias sofa",
+    "price": 799,
+    "category": 3,
+    "numder": 1
+  },
+  {
+    "id": 10,
+    "imageUrl": "https://hoff.ru/upload/hoff_resize/hoff-images/278/315/7/638cc07aca17365ca0356744acb9e135.jpg/666x444_85.webp",
+    "title": "Nyantuy sofa",
+    "price": 1200,
+    "category": 3,
+    "numder": 1
+  },
+  {
+    "id": 11,
+    "imageUrl": "https://hoff.ru/upload/iblock/6fb/6fb0c47fabedff638f7568c4eef58cb0.jpg",
+    "title": "Baltsar sofa",
+    "price": 999,
+    "category": 3,
+    "numder": 1
+  },
+  {
+    "id": 12,
+    "imageUrl": "https://hoff.ru/upload/iblock/87e/87e83aec56df470e8a60ffa0f7d33284.jpg",
+    "title": "Baltsar Lamp",
+    "price": 199,
+    "category": 4,
+    "numder": 1
+  },
+  {
+    "id": 13,
+    "imageUrl": "https://hoff.ru/upload/iblock/882/882d397400ff7314cdc99e807f797be6.jpg",
+    "title": "Nyantuy Lamp",
+    "price": 299,
+    "category": 4,
+    "numder": 1
+  },
+  {
+    "id": 14,
+    "imageUrl": "https://hoff.ru/upload/iblock/cb2/cb27f14e9d6495037eec3e0c4ae49312.jpg",
+    "title": "Baltsar Lamp",
+    "price": 400,
+    "category": 4,
+    "numder": 1
+  },
+  {
+    "id": 15,
+    "imageUrl": "https://hoff.ru/upload/iblock/54c/54c7ef75b6dd42b261575ce7887f41c8.jpg",
+    "title": "Sakarias Lamp",
+    "price": 355,
+    "category": 4,
+    "numder": 1
+  },
+  {
+    "id": 16,
+    "imageUrl": "https://hoff.ru/upload/hoff_resize/hoff-images/161/593/7/fd7b93f60d5c4899282886bba7d74979.jpg/666x444_85.webp",
+    "title": "Anjay Chair",
+    "price": 519,
+    "category": 1,
+    "numder": 1
+  },
+  {
+    "id": 17,
+    "imageUrl": "https://hoff.ru/upload/iblock/de2/de23766e6bea48c58e128649ef351282.jpg",
+    "title": "Nyantuy Chair",
+    "price": 921,
+    "category": 1,
+    "numder": 1
+  },
+  {
+    "id": 18,
+    "imageUrl": "https://hoff.ru/upload/iblock/f7a/f7a9575edf89ebae87afaea6766ef3ae.jpg",
+    "title": "Baltsar Chair",
+    "price": 299,
+    "category": 1,
+    "numder": 1
+  },
+  {
+    "id": 19,
+    "imageUrl": "https://hoff.ru/upload/iblock/d91/d913fef73985b982e4e17fe902cbeaaa.jpg",
+    "title": "Nyantuy Beds",
+    "price": 415,
+    "category": 2,
+    "numder": 1
+  },
+  {
+    "id": 20,
+    "imageUrl": "https://hoff.ru/upload/iblock/4c2/4c2b66e1493a33d279628e9fd1c1eed3.jpg",
+    "title": " Baltsar Beds",
+    "types": [0],
+    "sizes": [30, 40],
+    "price": 580,
+    "category": 2,
+    "numder": 1
+  },
+  {
+    "id": 22,
+    "imageUrl": "https://hoff.ru/upload/iblock/e4e/e4ed50cb2cf45fe39983e4821ff16a7b.jpg",
+    "title": "Sakarias Beds",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 675,
+    "category": 2,
+    "numder": 1
+  },
+  {
+    "id": 23,
+    "imageUrl": "https://hoff.ru/upload/iblock/636/63650d973e6cbe97a6ad4430c803b0ec.jpg",
+    "title": "Anjay Beds",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 450,
+    "category": 2,
+    "numder": 1
+  },
+  {
+    "id": 24,
+    "imageUrl": "https://hoff.ru/upload/iblock/058/058f092cbe0c6e899a28d3d776109f2a.jpg",
+    "title": "Anjay sofa",
+    "price": 789,
+    "category": 3,
+    "numder": 1
+  },
+  {
+    "id": 25,
+    "imageUrl": "https://hoff.ru/upload/iblock/07b/07b7bcd50cbca564514611fc09b87062.jpg",
+    "title": "Sakarias sofa",
+    "price": 799,
+    "category": 3,
+    "numder": 1
+  },
+  {
+    "id": 26,
+    "imageUrl": "https://hoff.ru/upload/hoff_resize/hoff-images/278/315/7/638cc07aca17365ca0356744acb9e135.jpg/666x444_85.webp",
+    "title": "Nyantuy sofa",
+    "price": 1200,
+    "category": 3,
+    "numder": 1
+  },
+  {
+    "id": 27,
+    "imageUrl": "https://hoff.ru/upload/iblock/6fb/6fb0c47fabedff638f7568c4eef58cb0.jpg",
+    "title": "Baltsar sofa",
+    "price": 999,
+    "category": 3,
+    "numder": 1
+  },
+  {
+    "id": 28,
+    "imageUrl": "https://hoff.ru/upload/iblock/87e/87e83aec56df470e8a60ffa0f7d33284.jpg",
+    "title": "Baltsar Lamp",
+    "price": 199,
+    "category": 4,
+    "numder": 1
+  },
+  {
+    "id": 29,
+    "imageUrl": "https://hoff.ru/upload/iblock/882/882d397400ff7314cdc99e807f797be6.jpg",
+    "title": "Nyantuy Lamp",
+    "price": 299,
+    "category": 4,
+    "numder": 1
+  },
+  {
+    "id": 30,
+    "imageUrl": "https://hoff.ru/upload/iblock/cb2/cb27f14e9d6495037eec3e0c4ae49312.jpg",
+    "title": "Baltsar Lamp",
+    "price": 400,
+    "category": 4,
+    "numder": 1
+  },
+  {
+    "id": 31,
+    "imageUrl": "https://hoff.ru/upload/iblock/54c/54c7ef75b6dd42b261575ce7887f41c8.jpg",
+    "title": "Sakarias Lamp",
+    "price": 355,
+    "category": 4,
+    "numder": 1
+  }
+]

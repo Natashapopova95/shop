@@ -1,0 +1,38 @@
+.categories {
+  max-width: 450px;
+  margin-top: 135px;
+}
+.categories ul {
+  display: flex;
+  border-radius: 44px;
+}
+.categories li {
+  padding: 11px 1px;
+}
+
+.categories li a {
+  font-size: 18px;
+  line-height: 140%;
+  color: #1e1e1e;
+  opacity: 0.8;
+  padding: 9px 25px;
+  border-radius: 30px;
+  margin: 4px 0px 5px 3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.categories a:hover {
+  background-color: #f6f6f666;
+}
+
+.categories li a:active {
+  background-color: darken(#7e7e7e, 5%);
+}
+#active {
+  background: #e58411;
+  color: #fff;
+  border-radius: 32px;
+  margin: 4px 0px 5px 3px;
+  font-weight: bold;
+}
