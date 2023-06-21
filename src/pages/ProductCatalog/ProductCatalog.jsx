@@ -108,7 +108,6 @@ export const ProductCatalog = () => {
                 .map((obj) => <CardCatalog key={obj.id} {...obj} />)}
         </div>
       </div>
-      <Pogination currentPage={currentPage} onChangePage={onChangePage} />
     </motion.div>
   );
 };
