@@ -69,3 +69,8 @@
     right: 46px;
   }
 }
+@media (max-width: 400px) {
+  .input {
+    max-width: 190px;
+  }
+}

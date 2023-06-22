@@ -9,7 +9,7 @@ import Slider from 'react-slick';
 
 export const Sliders = ({ item, isLoading }) => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 4,
@@ -21,8 +21,7 @@ export const Sliders = ({ item, isLoading }) => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
-          dots: true,
+          infinite: false,
         },
       },
       {
