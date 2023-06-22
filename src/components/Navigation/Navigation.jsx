@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { HashLink } from 'react-router-hash-link';
+import { HashLink as Link } from 'react-router-hash-link';
 
 import { IoIosMenu } from 'react-icons/io';
 import { GrClose } from 'react-icons/gr';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import { CartImages } from '../CartImages/CartImages';
 import styles from './Navigation.module.css';
@@ -19,9 +19,9 @@ export const Navigation = () => {
       <nav onClick={() => setNav(!nav)}>
         <ul className={nav ? [styles.menu, styles.active].join(' ') : [styles.menu]}>
           <li className={styles.item}>
-            <a href="#Advantages_advantages__Fymwh" className={styles.link}>
+            <Link smooth to="#Advantages_advantages__Fymwh" className={styles.link}>
               Advantages
-            </a>
+            </Link>
           </li>
           <li className={styles.item}>
             <a href="#Product_product__WLXqK" className={styles.link}>
