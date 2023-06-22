@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { HashLink } from 'react-router-hash-link';
+
 import { IoIosMenu } from 'react-icons/io';
 import { GrClose } from 'react-icons/gr';
 import { Link } from 'react-router-dom';

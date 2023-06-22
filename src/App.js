@@ -10,8 +10,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 import styles from './styles.module.css';
 
-export const SearchContext = createContext();
-
 function App() {
   const location = useLocation();
 
