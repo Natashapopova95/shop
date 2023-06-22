@@ -16,6 +16,9 @@
   scroll-behavior: smooth;
 }
 
+:global(.swiper-slide) {
+  width: 40px;
+}
 #slider::-webkit-scrollbar {
   display: none;
 }
@@ -50,7 +53,7 @@
   border-radius: 20px;
   position: relative;
   box-shadow: 1px 1px 1px 1px #e7e7e7;
-  max-width: 21.4%;
+  max-width: 230px;
   width: 100%;
 }
 
@@ -107,7 +110,7 @@
 .buttonAdd:active {
   opacity: 1;
 }
-@media (max-width: 950px) {
+/* @media (max-width: 950px) {
   #sliderCard {
     max-width: 26.4%;
     margin-left: 38px;
@@ -153,4 +156,4 @@
     margin-left: 47px;
     max-width: 72%;
   }
-}
+} */

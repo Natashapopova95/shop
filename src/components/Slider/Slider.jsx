@@ -1,41 +1,55 @@
 import React, { useRef } from 'react';
+import './slick.css';
+import './slick-theme.css';
 import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
 import styles from './Slider.module.css';
-import { StarRating } from '../StarRating/StarRating';
 import Skeleton from '../Skeleton';
 import { CardCatalog } from '../CardCatalog/CardCatalog';
+import Slider from 'react-slick';
 
-export const Slider = ({ item, isLoading }) => {
-  const slideLeft = () => {
-    var slider = document.getElementById('Slider_slider__NA5KE');
-    slider.scrollLeft = slider.scrollLeft + 1080;
-    console.log(slider);
-  };
-  const slideRinght = () => {
-    var slider = document.getElementById('Slider_slider__NA5KE');
-    slider.scrollLeft = slider.scrollLeft - 1080;
-    console.log(slider);
+export const Sliders = ({ item, isLoading }) => {
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className={styles.mainslidercontainer}>
-      <GoChevronLeft
-        size={40}
-        className={`${styles.sliderIcon} ${styles.left}`}
-        onClick={slideRinght}
-      ></GoChevronLeft>
-      <div id={styles.slider}>
-        {isLoading
-          ? [...new Array(4)].map((_, index) => <Skeleton key={index} />)
-          : item.map((obj) => {
-              return <CardCatalog key={obj.id} {...obj} />;
-            })}
-      </div>
-      <GoChevronRight
-        size={40}
-        className={`${styles.sliderIcon} ${styles.right}`}
-        onClick={slideLeft}
-      ></GoChevronRight>
-    </div>
+    <Slider {...settings}>
+      {isLoading
+        ? [...new Array(4)].map((_, index) => <Skeleton key={index} />)
+        : item.map((obj) => {
+            return <CardCatalog key={obj.id} {...obj} />;
+          })}
+    </Slider>
   );
 };

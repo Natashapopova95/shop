@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import axios, { Axios } from 'axios';
 import { Link } from 'react-router-dom';
 import styles from './Product.module.css';
-import { Slider } from '../Slider/Slider';
+import { Slider, Sliders } from '../Slider/Slider';
 import { Slider2 } from '../Slider/Slider2';
 
 export const Product = () => {
@@ -68,14 +68,7 @@ export const Product = () => {
               </li>
             </ul>
           </div>
-          <Slider
-            item={item}
-            value={categoryId}
-            onClickCategory={(i) => setCategoryId(i)}
-            isLoading={isLoading}
-          />
-
-          <Slider2
+          <Sliders
             item={item}
             value={categoryId}
             onClickCategory={(i) => setCategoryId(i)}
