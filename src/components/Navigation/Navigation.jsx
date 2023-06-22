@@ -24,7 +24,7 @@ export const Navigation = () => {
             </Link>
           </li>
           <li className={styles.item}>
-            <a href="#Product_product__WLXqK" className={styles.link}>
+            <a href="#Product_product__hQeO1" className={styles.link}>
               Product
             </a>
           </li>
@@ -34,7 +34,7 @@ export const Navigation = () => {
             </a>
           </li>
           <li className={styles.item}>
-            <a href="#Reviews_reviews__8nSSV" className={styles.link}>
+            <a href="#Reviews_reviews__n3fdK" className={styles.link}>
               Reviews
             </a>
           </li>
