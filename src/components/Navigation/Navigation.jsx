@@ -24,19 +24,19 @@ export const Navigation = () => {
             </Link>
           </li>
           <li className={styles.item}>
-            <a href="#Product_product__hQeO1" className={styles.link}>
+            <Link smooth to="#Product_product__hQeO1" className={styles.link}>
               Product
-            </a>
+            </Link>
           </li>
           <li className={styles.item}>
-            <a href="#ProductInformation_productInformation__Xy2S9" className={styles.link}>
+            <Link smooth to="#ProductInformation_productInformation__0uYG2" className={styles.link}>
               About Us
-            </a>
+            </Link>
           </li>
           <li className={styles.item}>
-            <a href="#Reviews_reviews__n3fdK" className={styles.link}>
+            <Link smooth to="#Reviews_reviews__n3fdK" className={styles.link}>
               Reviews
-            </a>
+            </Link>
           </li>
           <li className={styles.item}>
             <Link className={styles.link} to="ProductCatalog">
