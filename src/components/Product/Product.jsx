@@ -56,7 +56,7 @@ export const Product = () => {
               <li>
                 {list.map((catigoryName, i) => (
                   <a
-                    href="#Product_product__WLXqK"
+                    href="#Product_product__hQeO1"
                     key={i}
                     onClick={() => onClickCategory(i)}
                     id={categoryId === i ? styles.active : ''}
