@@ -5,6 +5,7 @@ import axios, { Axios } from 'axios';
 import { Link } from 'react-router-dom';
 import styles from './Product.module.css';
 import { Slider } from '../Slider/Slider';
+import { Slider2 } from '../Slider/Slider2';
 
 export const Product = () => {
   const list = ['Chair', 'Beds', 'Sofa', 'Lamp'];
@@ -73,6 +74,14 @@ export const Product = () => {
             onClickCategory={(i) => setCategoryId(i)}
             isLoading={isLoading}
           />
+
+          <Slider2
+            item={item}
+            value={categoryId}
+            onClickCategory={(i) => setCategoryId(i)}
+            isLoading={isLoading}
+          />
+
           <div className={styles.more_detailed}>
             <Link to="ProductCatalog">
               <a href="/">more detailed</a>
