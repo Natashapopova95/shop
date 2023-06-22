@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { IoIosMenu } from 'react-icons/io';
 import { GrClose } from 'react-icons/gr';
@@ -9,6 +9,7 @@ import styles from './Navigation.module.css';
 
 export const Navigation = () => {
   const [nav, setNav] = useState(false);
+
   return (
     <div className={styles.wrapper}>
       <Link to="/" className={styles.logo}>
@@ -17,28 +18,24 @@ export const Navigation = () => {
       <nav onClick={() => setNav(!nav)}>
         <ul className={nav ? [styles.menu, styles.active].join(' ') : [styles.menu]}>
           <li className={styles.item}>
-            <HashLink smooth to="#Advantages_advantages__Fymwh" className={styles.link}>
+            <a href="#Advantages_advantages__Fymwh" className={styles.link}>
               Advantages
-            </HashLink>
+            </a>
           </li>
           <li className={styles.item}>
-            <HashLink smooth to="#Product_product__WLXqK" className={styles.link}>
+            <a href="#Product_product__WLXqK" className={styles.link}>
               Product
-            </HashLink>
+            </a>
           </li>
           <li className={styles.item}>
-            <HashLink
-              smooth
-              to="#ProductInformation_productInformation__Xy2S9"
-              className={styles.link}
-            >
+            <a href="#ProductInformation_productInformation__Xy2S9" className={styles.link}>
               About Us
-            </HashLink>
+            </a>
           </li>
           <li className={styles.item}>
-            <HashLink smooth to="#Reviews_reviews__8nSSV" className={styles.link}>
+            <a href="#Reviews_reviews__8nSSV" className={styles.link}>
               Reviews
-            </HashLink>
+            </a>
           </li>
           <li className={styles.item}>
             <Link className={styles.link} to="ProductCatalog">
