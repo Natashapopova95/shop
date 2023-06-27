@@ -10,13 +10,13 @@
   height: 80px;
   cursor: pointer;
 }
-.slick-arrow.slick-prev {
+.arrow.slick-prev {
   left: -26px;
   opacity: 0.7;
   background: url(../../assets/images/left.svg) 0 0 / 100% no-repeat;
   transition: all 0.3s;
 }
-.slick-arrow.slick-prev:hover {
+.arrow.slick-prev:hover {
   opacity: 1;
 }
 
@@ -28,13 +28,4 @@
 }
 .slick-arrow.slick-next:hover {
   opacity: 1;
-}
-
-@media (max-width: 390px) {
-  .slick-arrow.slick-next {
-    display: none;
-  }
-  .slick-arrow.slick-prev {
-    display: none;
-  }
 }

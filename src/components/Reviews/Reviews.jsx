@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import axios, { Axios } from 'axios';
+import './slick.css';
+import './slick-themes.css';
+import Slider from 'react-slick';
+import axios from 'axios';
 import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
 import ReviewsSkeleton from './ReviewsSkeleton';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -9,15 +12,27 @@ export const Reviews = () => {
   const [Reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const slideLeft = () => {
-    var slider = document.getElementById('Reviews_sliders__izsGJ');
-    slider.scrollLeft = slider.scrollLeft + 1400;
-    console.log(slider);
-  };
-  const slideRinght = () => {
-    var slider = document.getElementById('Reviews_sliders__izsGJ');
-    slider.scrollLeft = slider.scrollLeft - 1400;
-    console.log(slider);
+  const settings = {
+    slidesToShow: 3,
+    slidesToScroll: 3,
+
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 670,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   useEffect(() => {
@@ -41,22 +56,15 @@ export const Reviews = () => {
       <div className={styles.wrapper}>
         <h4 className={styles.subtitle}>Testimonials</h4>
         <h2 className={styles.title}>Our Client Reviews</h2>
+        <Slider {...settings}>
+          {isLoading
+            ? [...new Array(3)].map((_, index) => <ReviewsSkeleton />)
+            : Reviews.map((obj) => {
+                return (
+                  <div key={obj.id} {...obj} className={styles.sliderCard}>
+                    <div className={styles.imgBg}>
+                      <img className={styles.images} src={obj.imageBg} alt=""></img>
 
-        <div className={styles.sliderContainer}>
-          <GoChevronLeft
-            size={40}
-            className={`${styles.sliderIcon} ${styles.left}`}
-            onClick={slideRinght}
-          />
-          <div id={styles.sliders}>
-            {isLoading
-              ? [...new Array(3)].map((_, index) => <ReviewsSkeleton />)
-              : Reviews.map((obj) => {
-                  return (
-                    <div key={obj.id} {...obj} className={styles.sliderCard}>
-                      <div className={styles.imgBg}>
-                        <img className={styles.images} src={obj.imageBg} alt=""></img>
-                      </div>
                       <div className={styles.cardUser}>
                         <div className={styles.user}>
                           <img className={styles.imgUser} src={obj.imagesUser} alt=""></img>
@@ -84,15 +92,10 @@ export const Reviews = () => {
                         </div>
                       </div>
                     </div>
-                  );
-                })}
-          </div>
-          <GoChevronRight
-            size={40}
-            className={`${styles.sliderIcon} ${styles.right}`}
-            onClick={slideLeft}
-          />
-        </div>
+                  </div>
+                );
+              })}
+        </Slider>
       </div>
     </div>
   );

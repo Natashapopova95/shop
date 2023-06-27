@@ -4,8 +4,7 @@ import React, { useState, useEffect } from 'react';
 import axios, { Axios } from 'axios';
 import { Link } from 'react-router-dom';
 import styles from './Product.module.css';
-import { Slider, Sliders } from '../Slider/Slider';
-import { Slider2 } from '../Slider/Slider2';
+import { Sliders } from '../Slider/Sliders';
 
 export const Product = () => {
   const list = ['Chair', 'Beds', 'Sofa', 'Lamp'];
