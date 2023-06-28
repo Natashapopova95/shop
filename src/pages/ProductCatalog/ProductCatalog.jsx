@@ -4,7 +4,7 @@ import qs from 'qs';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCategoryId, setCurrentPage, setFilters } from '../../redux/slices/filterSlice';
 import { Search } from '../../components/Search/Search';
-import { CartImages } from '../../components/CartImages/CartImages';
+import cart from '../../assets/images/shoppingCart.svg';
 import styles from './ProductCatalog.module.css';
 import { Categories } from '../../components/Categories/Categories';
 import { Pogination } from '../../components/Pagination/Pogination';
@@ -21,6 +21,8 @@ export const ProductCatalog = () => {
   const navigate = useNavigate();
   const isSearch = useRef(false);
   const isMounted = useRef(false);
+  const items = useSelector((state) => state.cart.items);
+  const totalPrice = items.reduce((sum, item) => sum + item.count, 0);
 
   const [searchTerm, setSearchTerm] = useState('');
   const [isLoading, setIsLoading] = useState(true);
@@ -94,7 +96,12 @@ export const ProductCatalog = () => {
               Panto
             </Link>
             <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-            <CartImages item={item} />
+            <div className={styles.cart_container}>
+              <Link to="Cart">
+                <img src={cart} alt="" className={styles.cart_images} />
+              </Link>
+              <span>{totalPrice}</span>
+            </div>
           </div>
         </div>
       </div>

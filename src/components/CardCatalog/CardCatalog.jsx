@@ -8,7 +8,7 @@ import styles from './CardCatalog.module.css';
 
 export const CardCatalog = ({ id, price, title, imageUrl }) => {
   const items = useSelector((state) => state.cart.items);
-
+  const totalPrice = items.reduce((sum, item) => sum + item.count, 0);
   const dispatch = useDispatch();
   // const cartItems = useSelector((state) => state.cart.items.find((obj) => obj.id === id));
   // const addedCount = cartItems ? cartItems.count : 0;
@@ -57,6 +57,7 @@ export const CardCatalog = ({ id, price, title, imageUrl }) => {
                 fill="white"
               />
             </svg>
+            <span>{totalPrice}</span>
           </div>
         </div>
       </div>

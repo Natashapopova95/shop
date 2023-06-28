@@ -89,6 +89,13 @@
   color: #0d1b39;
   margin-bottom: 10px;
 }
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
 .price {
   display: flex;
   column-gap: 90px;
@@ -117,6 +124,24 @@
   top: 35px;
   right: 56px;
   z-index: 10;
+}
+.cart_container {
+  position: relative;
+  z-index: 20;
+}
+.cart_container span {
+  position: absolute;
+  background-color: #e58411;
+  width: 23px;
+  height: 23px;
+  border-radius: 50px;
+  top: -5px;
+  right: -7px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
 
 @media (max-width: 950px) {
