@@ -20,27 +20,6 @@
   color: #1e1e1e;
   margin-bottom: 60px;
 }
-.sliderContainer {
-  max-width: 1231px;
-  margin: 0 auto;
-  height: 550px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#sliders {
-  width: 100%;
-  height: 100%;
-  white-space: nowrap;
-  overflow-x: scroll;
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-}
-
-#sliders::-webkit-scrollbar {
-  display: none;
-}
 
 .sliderIcon.left,
 .sliderIcon.right {
@@ -71,7 +50,7 @@
   position: relative;
   box-shadow: 1px 1px 1px 1px #e7e7e7;
   max-width: 331px;
-  margin: 0 0px 50px 18px;
+  margin: 0 auto;
 }
 
 .images {
@@ -79,6 +58,7 @@
   height: 476px;
   border-radius: 20px;
   position: relative;
+  margin: 0 auto;
 }
 .imgBg {
   position: relative;
@@ -142,49 +122,61 @@
 .starRating svg {
   margin-right: 8px;
 }
-@media (max-width: 1270px) {
-  .sliderCard {
-    margin-left: 10px calc(2vw + 5px);
-  }
-}
-@media (max-width: 900px) {
+
+@media (max-width: 950px) {
   .sliderCard {
     max-width: 261px;
-    margin: 0 0px 50px 47px;
   }
   .images {
     max-width: 300px;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .sliderCard {
-    margin-left: 8px;
+    max-width: 223px;
+  }
+  .images {
+    max-width: 265px;
+  }
+}
+@media (max-width: 700px) {
+  .sliderCard {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+  .cardUser {
+    left: 13px;
+    height: 219px;
+  }
+
+  .images {
+    max-width: 223px;
+    height: 406px;
   }
 }
 @media (max-width: 670px) {
   .sliderCard {
-    margin-left: 142px;
-  }
-  .sliderCard {
-    max-width: 226px;
+    max-width: 289px;
   }
   .images {
-    max-width: 263px;
+    max-width: 350px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 500px) {
   .sliderCard {
-    margin-left: 100px;
+    max-width: 223px;
+  }
+  .images {
+    max-width: 250px;
   }
 }
 
-@media (max-width: 450px) {
-  .images {
-    width: 297px;
-    height: 386px;
+@media (max-width: 430px) {
+  .sliderCard {
+    max-width: 175px;
   }
-  .cardUser {
-    max-width: 260px;
+  .images {
+    max-width: 200px;
   }
   .imgBg::before {
     content: '';
@@ -194,25 +186,33 @@
     left: 32px;
     top: 132px;
   }
-  .sliderCard {
-    margin-left: 50px;
-  }
 }
-@media (max-width: 415px) {
-  .sliderCard {
-    margin-left: 27px;
-  }
-}
+
 @media (max-width: 375px) {
   .sliderCard {
-    margin-left: 14px;
+    max-width: 160px;
+  }
+  .cardUser {
+    height: 231px;
+  }
+  .images {
+    max-width: 187px;
+    height: 327px;
   }
 }
 @media (max-width: 350px) {
   .sliderCard {
-    max-width: 206px;
+    max-width: 140px;
   }
   .images {
-    width: 240px;
+    max-width: 170px;
+  }
+}
+@media (max-width: 320px) {
+  .sliderCard {
+    max-width: 126px;
+  }
+  .images {
+    max-width: 150px;
   }
 }

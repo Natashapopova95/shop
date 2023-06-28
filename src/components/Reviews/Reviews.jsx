@@ -15,10 +15,12 @@ export const Reviews = () => {
   const settings = {
     slidesToShow: 3,
     slidesToScroll: 3,
+    centerMode: true,
+    centerPadding: '50px',
 
     responsive: [
       {
-        breakpoint: 1000,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
