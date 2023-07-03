@@ -111,6 +111,7 @@
 .bottom_details b {
   color: #e58411;
 }
+
 .btn {
   display: flex;
   align-items: center;
@@ -123,6 +124,22 @@
   margin-top: 30px;
   transition: all 0.3s ease-in-out;
 }
+
+.btn:hover {
+  background: #e58411;
+  transform: translate(0, 0.1em);
+}
+.btn:hover::before {
+  transform: translate3d(0, 0.5em, -1em);
+}
+.btn:active {
+  background: #e58411;
+  transform: translate(0em, 0.15em);
+}
+.btn:active::before {
+  transform: translate3d(0, 0, -1em);
+}
+
 .btn span {
   font-weight: 400;
   font-size: 16px;
@@ -133,12 +150,11 @@
 .btn span {
   color: #d3d3d3;
 }
-.btn:hover {
-  background: #e58411;
-}
+
 .pay_btn {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 @media (max-width: 630px) {

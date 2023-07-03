@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import axios from 'axios';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import qs from 'qs';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCategoryId, setCurrentPage, setFilters } from '../../redux/slices/filterSlice';
@@ -7,50 +7,51 @@ import { Search } from '../../components/Search/Search';
 import cart from '../../assets/images/shoppingCart.svg';
 import styles from './ProductCatalog.module.css';
 import { Categories } from '../../components/Categories/Categories';
-import { Pogination } from '../../components/Pagination/Pogination';
 
-import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Skeleton from '../../components/Skeleton';
 import { CardCatalog } from '../../components/CardCatalog/CardCatalog';
+import { fetchProduct } from '../../redux/slices/productSlice';
+import { PageError } from '../../components/PageError/PageError';
+import { SearchError } from '../../components/SearchError/SearchError';
 
 export const ProductCatalog = () => {
   const categoryId = useSelector((state) => state.filter.categoryId);
   const currentPage = useSelector((state) => state.filter.currentPage);
+  const items = useSelector((state) => state.cart.items);
+  const totalPrice = items.reduce((sum, item) => sum + item.count, 0);
+  const value = useSelector((state) => state.product.items);
+  const status = useSelector((state) => state.product.status);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isSearch = useRef(false);
   const isMounted = useRef(false);
-  const items = useSelector((state) => state.cart.items);
-  const totalPrice = items.reduce((sum, item) => sum + item.count, 0);
+  const location = useLocation();
+
+  console.log(location, window.location);
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
-  const [item, setItem] = useState([]);
 
-  const fetchPizzas = () => {
+  const fetchData = async () => {
     const category = categoryId > 0 ? `category=${categoryId}` : '';
     const search = searchTerm ? `search=${searchTerm}` : '';
-    axios
-      .get(
-        `https://6489b0075fa58521cab00ef9.mockapi.io/value?page=${currentPage}&limit=8&${category}&order=desc&${search}`,
-      )
-      .then((res) => {
-        setItem(res.data);
-        setIsLoading(false);
-      });
+
+    dispatch(
+      fetchProduct({
+        category,
+        search,
+      }),
+    );
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
     if (!isSearch.current) {
-      fetchPizzas();
+      fetchData();
     }
 
     isSearch.current = false;
-  }, [currentPage, categoryId, searchTerm]);
 
-  useEffect(() => {
     if (isMounted.current) {
       const queryString = qs.stringify({
         categoryId,
@@ -59,7 +60,7 @@ export const ProductCatalog = () => {
       navigate(`?${queryString}`);
     }
     isMounted.current = true;
-  }, [currentPage, categoryId]);
+  }, [currentPage, categoryId, searchTerm]);
 
   useEffect(() => {
     if (window.location.search) {
@@ -96,6 +97,7 @@ export const ProductCatalog = () => {
               Panto
             </Link>
             <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+
             <div className={styles.cart_container}>
               <Link to="Cart">
                 <img src={cart} alt="" className={styles.cart_images} />
@@ -108,11 +110,17 @@ export const ProductCatalog = () => {
       <div className={styles.container}>
         <Categories value={categoryId} onClickCategory={onClickCategory} />
         <div className={styles.catalog}>
-          {isLoading
-            ? [...new Array(8)].map((_, index) => <Skeleton />)
-            : item
-                .filter((obj) => obj.title.toLowerCase().includes(searchTerm))
-                .map((obj) => <CardCatalog key={obj.id} {...obj} />)}
+          {status === 'error' ? (
+            <PageError />
+          ) : status === 'loading' ? (
+            [...new Array(8)].map((_, index) => <Skeleton />)
+          ) : value.length === 0 ? (
+            <SearchError />
+          ) : (
+            value
+              .filter((obj) => obj.title.toLowerCase().includes(searchTerm))
+              .map((obj) => <CardCatalog key={obj.id} {...obj} />)
+          )}
         </div>
       </div>
     </motion.div>

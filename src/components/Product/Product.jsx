@@ -1,47 +1,45 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
-import axios, { Axios } from 'axios';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styles from './Product.module.css';
 import { Sliders } from '../Slider/Sliders';
+import { fetchProduct } from '../../redux/slices/productSlice';
 
 export const Product = () => {
-  const list = ['Chair', 'Beds', 'Sofa', 'Lamp'];
-  const [item, setItem] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const value = useSelector((state) => state.product.items);
+  const status = useSelector((state) => state.product.status);
+  const dispatch = useDispatch();
+  const list = ['All', 'Chair', 'Beds', 'Sofa', 'Lamp'];
   const [categoryId, setCategoryId] = useState(0);
-  const [sortType, setSortType] = useState({
-    sortProperty: 'reting',
-  });
+
+  const fetchCategories = async () => {
+    const category = categoryId > 0 ? `category=${categoryId}` : '';
+    dispatch(
+      fetchProduct({
+        category,
+      }),
+    );
+
+    // try {
+    //   const res = await axios.get(
+    //     `https://6474a9747de100807b1b7d1c.mockapi.io/item?${
+    //       categoryId > 0 ? `category=${categoryId}` : ''
+    //     }&sortBy=${sortType.sortProperty}&order=desc`,
+    //   );
+    //   setItem(res.data);
+    //   setIsLoading(false);
+    // } catch (error) {
+    //   setIsLoading(false);
+    //   console.log('error', error);
+    // }
+  };
+
   useEffect(() => {
-    // fetch(
-    //   `https://6474a9747de100807b1b7d1c.mockapi.io/item?${
-    //     categoryId > 0 ? `category=${categoryId}` : ''
-    //   }&sortBy=${sortType.sortProperty}&order=desc`,
-    // )
-    //   .then((res) => {
-    //     return res.json();
-    //   })
-    //   .then((arr) => {
-    //     setItem(arr);
-    //     setIsLoading(false);
-    //   });
-
-    axios
-      .get(
-        `https://6474a9747de100807b1b7d1c.mockapi.io/item?${
-          categoryId > 0 ? `category=${categoryId}` : ''
-        }&sortBy=${sortType.sortProperty}&order=desc`,
-      )
-      .then((res) => {
-        setItem(res.data);
-        setIsLoading(false);
-      });
     window.scrollTo(0, 0);
+    fetchCategories();
   }, [categoryId]);
-
-  console.log(categoryId);
 
   const onClickCategory = (i) => {
     setCategoryId(i);
@@ -67,12 +65,7 @@ export const Product = () => {
               </li>
             </ul>
           </div>
-          <Sliders
-            item={item}
-            value={categoryId}
-            onClickCategory={(i) => setCategoryId(i)}
-            isLoading={isLoading}
-          />
+          <Sliders item={value} value={categoryId} onClickCategory={(i) => setCategoryId(i)} />
 
           <div className={styles.more_detailed}>
             <Link to="ProductCatalog">

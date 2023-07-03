@@ -1,0 +1,9 @@
+.title {
+  font-size: 30px;
+  color: rgb(201 128 16 / 84%);
+}
+@media (max-width: 585px) {
+  .title {
+    font-size: 20px;
+  }
+}

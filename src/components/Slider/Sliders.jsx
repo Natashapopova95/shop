@@ -1,11 +1,14 @@
 import React, { useRef } from 'react';
+import { useSelector } from 'react-redux';
 import './slick.css';
 import './slick-theme.css';
 import Slider from 'react-slick';
 import Skeleton from '../Skeleton';
 import { CardCatalog } from '../CardCatalog/CardCatalog';
+import { PageError } from '../PageError/PageError';
 
 export const Sliders = ({ item, isLoading }) => {
+  const status = useSelector((state) => state.product.status);
   const settings = {
     speed: 500,
     slidesToShow: 4,
@@ -40,11 +43,9 @@ export const Sliders = ({ item, isLoading }) => {
 
   return (
     <Slider {...settings}>
-      {isLoading
-        ? [...new Array(4)].map((_, index) => <Skeleton key={index} />)
-        : item.map((obj) => {
-            return <CardCatalog key={obj.id} {...obj} />;
-          })}
+      {status === 'loading'
+        ? [...new Array(8)].map((_, index) => <Skeleton />)
+        : item.map((obj) => <CardCatalog key={obj.id} {...obj} />)}
     </Slider>
   );
 };

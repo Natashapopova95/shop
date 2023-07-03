@@ -3,7 +3,6 @@ import './slick.css';
 import './slick-themes.css';
 import Slider from 'react-slick';
 import axios from 'axios';
-import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
 import ReviewsSkeleton from './ReviewsSkeleton';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import styles from './Reviews.module.css';
@@ -37,20 +36,18 @@ export const Reviews = () => {
     ],
   };
 
-  useEffect(() => {
-    // fetch('https://647b5af0d2e5b6101db1358c.mockapi.io/Reviews')
-    //   .then((res) => {
-    //     return res.json();
-    //   })
-    //   .then((item) => {
-    //     setReviews(item);
-    //     setIsLoading(false);
-    //   });
-
-    axios.get('https://647b5af0d2e5b6101db1358c.mockapi.io/Reviews').then((res) => {
+  const fetchReviews = async () => {
+    try {
+      const res = await axios.get('https://647b5af0d2e5b6101db1358c.mockapi.io/Reviews');
       setReviews(res.data);
       setIsLoading(false);
-    });
+    } catch (error) {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchReviews();
   }, []);
 
   return (

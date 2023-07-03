@@ -5,7 +5,7 @@ import searchImg from '../../assets/images/search.svg';
 import { IoMdClose } from 'react-icons/io';
 import { useState } from 'react';
 
-export const Search = ({ searchTerm, handleChange, setSearchTerm }) => {
+export const Search = ({ setSearchTerm, searchTerm }) => {
   const [value, setValue] = useState('');
   const inputRef = useRef();
 
@@ -36,6 +36,7 @@ export const Search = ({ searchTerm, handleChange, setSearchTerm }) => {
         value={value}
         onChange={onChangeInput}
       />
+
       {value && <IoMdClose onClick={onClickClear} size={30} className={styles.close} />}
       <div className={styles.search}>
         <img src={searchImg} alt="" />

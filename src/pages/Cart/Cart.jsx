@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { CatrEmpry } from '../../components/CatrEmpry/CatrEmpry';
 import { useSelector, useDispatch } from 'react-redux';
 import { motion } from 'framer-motion';
 import { CartItem } from '../../components/CartItem/CartItem';
 import styles from './Cart.module.css';
 import { clearItems } from '../../redux/slices/catrSlice';
+import { GoBackButton } from '../../components/GoBackButton/GoBackButton';
 
 export function Cart() {
   const dispatch = useDispatch();
@@ -16,6 +17,10 @@ export function Cart() {
       dispatch(clearItems());
     }
   };
+
+  if (!totalPrice) {
+    return <CatrEmpry />;
+  }
   return (
     <motion.div
       className={styles.container}
@@ -109,28 +114,7 @@ export function Cart() {
               <span>
                 Всего товаров: <b>{totalCount} шт.</b>
               </span>
-
-              <div className={styles.btn}>
-                <Link to="/" className={styles.button}>
-                  <svg
-                    width="8"
-                    height="14"
-                    viewBox="0 0 8 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M7 13L1 6.93015L6.86175 1"
-                      stroke="#D3D3D3"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-
-                  <span>Вернуться назад</span>
-                </Link>
-              </div>
+              <GoBackButton />
             </div>
 
             <div className={styles.bottom_details}>
