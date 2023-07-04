@@ -4,8 +4,7 @@ import './slick.css';
 import './slick-theme.css';
 import Slider from 'react-slick';
 import Skeleton from '../Skeleton';
-import { CardCatalog } from '../CardCatalog/CardCatalog';
-import { PageError } from '../PageError/PageError';
+import { CardCatalog } from '../CardCatalog';
 
 export const Sliders = ({ item, isLoading }) => {
   const status = useSelector((state) => state.product.status);

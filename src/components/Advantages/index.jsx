@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Advantages.module.css';
-import { MoreInfoButton } from '../MoreInfoButton/MoreInfoButton';
+import { MoreInfoButton } from '../MoreInfoButton';
 
 export const Advantages = () => {
   const [luxury, setLuxury] = useState(false);

@@ -5,7 +5,7 @@ import MaterialsMin2 from '../../assets/images/Materials_min2.jpg';
 import MaterialsMax from '../../assets/images/Materials.jpg';
 
 import styles from './ProductInformation.module.css';
-import { MoreInfoButton } from '../MoreInfoButton/MoreInfoButton';
+import { MoreInfoButton } from '../MoreInfoButton';
 
 export const ProductInformation = () => {
   return (

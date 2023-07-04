@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './PageError.module.css';
-import { GoBackButton } from '../GoBackButton/GoBackButton';
+import { GoBackButton } from '../GoBackButton';
 export const PageError = () => {
   return (
     <div className={styles.wrapper}>

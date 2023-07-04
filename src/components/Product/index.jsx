@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styles from './Product.module.css';
-import { Sliders } from '../Slider/Sliders';
+import { Sliders } from '../Slider';
 import { fetchProduct } from '../../redux/slices/productSlice';
 
 export const Product = () => {

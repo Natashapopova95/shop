@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './CatrEmpry.module.css';
-import { GoBackButton } from '../GoBackButton/GoBackButton';
+import { GoBackButton } from '../GoBackButton';
 export const CatrEmpry = () => {
   return (
     <div className={styles.wrapper}>

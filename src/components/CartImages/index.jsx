@@ -10,7 +10,7 @@ export const CartImages = () => {
   return (
     <div className={styles.box}>
       <Link to="Cart">
-        <img src={cart} alt="" className={styles.cart_img} />
+        <img src={cart} alt="" />
       </Link>
       <span>{totalPrice}</span>
     </div>

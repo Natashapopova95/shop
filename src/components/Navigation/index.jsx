@@ -5,7 +5,7 @@ import { IoIosMenu } from 'react-icons/io';
 import { GrClose } from 'react-icons/gr';
 // import { Link } from 'react-router-dom';
 
-import { CartImages } from '../CartImages/CartImages';
+import { CartImages } from '../CartImages';
 import styles from './Navigation.module.css';
 
 export const Navigation = () => {

@@ -1,15 +1,15 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
 
-import { Advantages } from '../../components/Advantages/Advantages';
-import { Product } from '../../components/Product/Product';
-import { ProductInformation } from '../../components/ProductInformation/ProductInformation';
-import { Reviews } from '../../components/Reviews/Reviews';
-import { Footer } from '../../components/Footer/Footer';
+import { Advantages } from '../../components/Advantages';
+import { Product } from '../../components/Product';
+import { ProductInformation } from '../../components/ProductInformation';
+import { Reviews } from '../../components/Reviews';
+import { Footer } from '../../components/Footer';
 
 import { motion } from 'framer-motion';
-import { Navigation } from '../../components/Navigation/Navigation';
-import { GoTop } from '../../components/GoTop/GoTop';
+import { Navigation } from '../../components/Navigation';
+import { GoTop } from '../../components/GoTop';
 import styles from './Home.module.css';
 
 export const Home = () => {

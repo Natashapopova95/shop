@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { CatrEmpry } from '../../components/CatrEmpry/CatrEmpry';
+import { CatrEmpry } from '../../components/CatrEmpry';
 import { useSelector, useDispatch } from 'react-redux';
 import { motion } from 'framer-motion';
-import { CartItem } from '../../components/CartItem/CartItem';
+import { CartItem } from '../../components/CartItem';
 import styles from './Cart.module.css';
 import { clearItems } from '../../redux/slices/catrSlice';
-import { GoBackButton } from '../../components/GoBackButton/GoBackButton';
+import { GoBackButton } from '../../components/GoBackButton';
 
 export function Cart() {
   const dispatch = useDispatch();

@@ -3,17 +3,17 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import qs from 'qs';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCategoryId, setCurrentPage, setFilters } from '../../redux/slices/filterSlice';
-import { Search } from '../../components/Search/Search';
+import { Search } from '../../components/Search/';
 import cart from '../../assets/images/shoppingCart.svg';
 import styles from './ProductCatalog.module.css';
-import { Categories } from '../../components/Categories/Categories';
+import { Categories } from '../../components/Categories';
 
 import { motion } from 'framer-motion';
 import Skeleton from '../../components/Skeleton';
-import { CardCatalog } from '../../components/CardCatalog/CardCatalog';
+import { CardCatalog } from '../../components/CardCatalog';
 import { fetchProduct } from '../../redux/slices/productSlice';
-import { PageError } from '../../components/PageError/PageError';
-import { SearchError } from '../../components/SearchError/SearchError';
+import { PageError } from '../../components/PageError';
+import { SearchError } from '../../components/SearchError';
 
 export const ProductCatalog = () => {
   const categoryId = useSelector((state) => state.filter.categoryId);

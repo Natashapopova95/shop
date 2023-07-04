@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { AiFillPlusCircle } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
 import { addItems } from '../../redux/slices/catrSlice';
-import { StarRating } from '../StarRating/StarRating';
+import { StarRating } from '../StarRating';
 import styles from './CardCatalog.module.css';
 
 export const CardCatalog = ({ id, price, title, imageUrl }) => {
