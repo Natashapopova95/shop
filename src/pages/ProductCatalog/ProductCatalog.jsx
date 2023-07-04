@@ -83,6 +83,7 @@ export const ProductCatalog = () => {
     dispatch(setCurrentPage(number));
   };
 
+  console.log('cat', categoryId);
   return (
     <motion.div
       className={styles.ProductCatalog}

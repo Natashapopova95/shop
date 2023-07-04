@@ -31,32 +31,44 @@
   position: absolute;
   top: 1px;
   right: 32px;
+  background: transparent;
+  transition: transform 0.3s;
 }
 .button_outline:hover {
   opacity: 1;
+}
+.button_outline:active {
+  opacity: 1;
+  transform: translate(0, 0.1em);
 }
 .item__minus {
   color: #e58411;
   opacity: 0.5;
   transition: all 0.3s;
   position: absolute;
+  background: transparent;
+  transition: transform 0.3s;
   top: 1px;
   left: 32px;
 }
 .item__minus:hover {
   opacity: 1;
 }
+.item__minus:active {
+  opacity: 1;
+  transform: translate(0, 0.1em);
+}
 
 .button_circle {
   color: #e58411;
   opacity: 0.5;
-  transition: all 0.3s;
+  transition: transform 0.3s;
 }
 .button_circle:hover {
   opacity: 1;
 }
 .button_circle:active {
-  color: #000000;
+  transform: translate(0, 0.1em);
 }
 
 .cart__count b {

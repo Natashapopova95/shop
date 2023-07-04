@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import styles from './StarRating.module.css';
 
 export const StarRating = () => {
-  const [rating, setRating] = useState(null);
+  const [rating, setRating] = useState(() => {
+    const sevedItems = localStorage.getItem('value');
+    const parsedItem = JSON.parse(sevedItems);
+    return parsedItem || '';
+  });
   const [hover, setHover] = useState(null);
+
+  useEffect(() => {
+    localStorage.setItem('value', JSON.stringify(rating));
+  }, [rating]);
+
   return (
     <div className={styles.starRating}>
       {[...Array(5)].map((star, i) => {

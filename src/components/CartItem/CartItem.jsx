@@ -35,13 +35,13 @@ export const CartItem = ({ id, title, price, count, imageUrl }) => {
         <h3>{title}</h3>
       </div>
       <div className={styles.cart__count}>
-        <div className={styles.button_outline}>
-          <AiOutlineMinusCircle onClick={onClickMinus} size={25} />
-        </div>
+        <button disabled={count === 1} onClick={onClickMinus} className={styles.button_outline}>
+          <AiOutlineMinusCircle size={25} />
+        </button>
         <b>{count}</b>
-        <div className={styles.item__minus}>
-          <MdAddCircleOutline size={27} onClick={onClickPlus} />
-        </div>
+        <button onClick={onClickPlus} className={styles.item__minus}>
+          <MdAddCircleOutline size={27} />
+        </button>
       </div>
       <div className={styles.cart__price}>
         <b>{price * count} ₽</b>
