@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { CatrEmpry } from '../../components/CatrEmpry/CatrEmpry';
 import { useSelector, useDispatch } from 'react-redux';
 import { motion } from 'framer-motion';
@@ -11,6 +11,11 @@ export function Cart() {
   const dispatch = useDispatch();
   const { totalPrice, items } = useSelector((state) => state.cart);
   const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+
+  useEffect(() => {
+    const json = JSON.stringify(items);
+    localStorage.setItem('cart', json);
+  }, [items]);
 
   const onClickClear = () => {
     if (window.confirm('Очистить корзину?')) {
