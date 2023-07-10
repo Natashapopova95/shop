@@ -9,8 +9,10 @@ import { GoBackButton } from '../../components/GoBackButton';
 
 export function Cart() {
   const dispatch = useDispatch();
-  const { totalPrice, items } = useSelector((state) => state.cart);
+  const { items } = useSelector((state) => state.cart);
   const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+
+  const totalPrices = items.reduce((sum, item) => sum + item.price, 0);
 
   useEffect(() => {
     const json = JSON.stringify(items);
@@ -23,9 +25,10 @@ export function Cart() {
     }
   };
 
-  if (!totalPrice) {
+  if (!totalPrices) {
     return <CatrEmpry />;
   }
+
   return (
     <motion.div
       className={styles.container}
@@ -124,7 +127,7 @@ export function Cart() {
 
             <div className={styles.bottom_details}>
               <span>
-                Сумма заказа: <b>{totalPrice} ₽</b>
+                Сумма заказа: <b>{totalPrices} $</b>
               </span>
 
               <div className={styles.btn}>

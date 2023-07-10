@@ -44,7 +44,7 @@ export const CartItem = ({ id, title, price, count, imageUrl }) => {
         </button>
       </div>
       <div className={styles.cart__price}>
-        <b>{price * count} ₽</b>
+        <b>{price * count} $</b>
       </div>
       <div className={styles.cart__item_remove}>
         <div className={styles.button_circle}>
