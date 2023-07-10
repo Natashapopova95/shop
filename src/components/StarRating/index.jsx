@@ -21,6 +21,7 @@ export const StarRating = () => {
         return (
           <label>
             <input
+              key={i}
               type="radio"
               name="rating"
               className={styles.input}

@@ -45,7 +45,9 @@ export const Navigation = () => {
           </li>
         </ul>
       </nav>
-      <CartImages />
+      <div className={styles.box}>
+        <CartImages />
+      </div>
       <div onClick={() => setNav(!nav)} className={styles.menu_burger}>
         {nav ? <GrClose size={40} /> : <IoIosMenu size={40} />}
       </div>

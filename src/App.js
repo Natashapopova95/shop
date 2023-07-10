@@ -18,7 +18,7 @@ function App() {
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/Cart" element={<Cart />} /> */}
+          <Route path="/Cart" element={<Cart />} />
           <Route path="/ProductCatalog/Cart" element={<Cart />} />
           <Route path="/ProductCatalog" element={<ProductCatalog />} />
           <Route path="*" element={<NotFound />} />

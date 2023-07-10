@@ -14,6 +14,7 @@ import { CardCatalog } from '../../components/CardCatalog';
 import { fetchProduct } from '../../redux/slices/productSlice';
 import { PageError } from '../../components/PageError';
 import { SearchError } from '../../components/SearchError';
+import { CartImages } from '../../components/CartImages';
 
 export const ProductCatalog = () => {
   const categoryId = useSelector((state) => state.filter.categoryId);
@@ -100,10 +101,7 @@ export const ProductCatalog = () => {
             <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
             <div className={styles.cart_container}>
-              <Link to="Cart">
-                <img src={cart} alt="" className={styles.cart_images} />
-              </Link>
-              <span>{totalPrice}</span>
+              <CartImages />
             </div>
           </div>
         </div>

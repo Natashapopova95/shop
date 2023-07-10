@@ -43,7 +43,7 @@ export const Sliders = ({ item, isLoading }) => {
   return (
     <Slider {...settings}>
       {status === 'loading'
-        ? [...new Array(8)].map((_, index) => <Skeleton />)
+        ? [...new Array(8)].map((_, index) => <Skeleton key={index} />)
         : item.map((obj) => <CardCatalog key={obj.id} {...obj} />)}
     </Slider>
   );

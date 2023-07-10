@@ -57,7 +57,7 @@ export const Reviews = () => {
         <h2 className={styles.title}>Our Client Reviews</h2>
         <Slider {...settings}>
           {isLoading
-            ? [...new Array(3)].map((_, index) => <ReviewsSkeleton />)
+            ? [...new Array(3)].map((_, index) => <ReviewsSkeleton key={index} />)
             : Reviews.map((obj) => {
                 return (
                   <div key={obj.id} {...obj} className={styles.sliderCard}>
