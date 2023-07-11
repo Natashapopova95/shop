@@ -72,6 +72,7 @@
 @media (max-width: 600px) {
   #wrapper {
     margin: 60px 0 30px 0;
+    flex-direction: column;
   }
   .discription {
     flex-wrap: wrap;
