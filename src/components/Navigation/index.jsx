@@ -19,7 +19,7 @@ export const Navigation = () => {
       <nav onClick={() => setNav(!nav)}>
         <ul className={nav ? [styles.menu, styles.active].join(' ') : [styles.menu]}>
           <li className={styles.item}>
-            <Link smooth to="#Advantages_advantages__1HlnI" className={styles.link}>
+            <Link smooth to="#Advantages_wrapper__o7dnS" className={styles.link}>
               Advantages
             </Link>
           </li>
