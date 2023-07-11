@@ -7,8 +7,8 @@ export const Advantages = () => {
   const [many, setMany] = useState(false);
 
   return (
-    <div id={styles.advantages}>
-      <div className={styles.wrapper}>
+    <div className={styles.advantages}>
+      <div id={styles.wrapper}>
         <h2 className={styles.title}>Why Choosing Us</h2>
         <div className={styles.discription}>
           <div className={styles.colomns}>
