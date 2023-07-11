@@ -70,7 +70,7 @@
 }
 
 @media (max-width: 600px) {
-  .wrapper {
+  #wrapper {
     margin: 60px 0 30px 0;
   }
   .discription {
